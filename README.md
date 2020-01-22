@@ -1,0 +1,2 @@
+# simple-spam-classification
+This simple program classify a text message as spam/not spam. It uses NLTK and Pandas library. The mechanism behind the classification is by using a training data with spam/not spam label, and by using direct comparison between keywords from the spam and not spam categories. For words that appear in spam categories and not in not spam categories, it will be saved as spam keywords. When a test text given as an input, the program will see whether it has the spam keyword in it or not, then classify it accordingly.
