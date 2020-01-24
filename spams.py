@@ -2,11 +2,14 @@ import nltk
 import pandas as pd
 #nltk.download("punkt")
 from nltk.tokenize import word_tokenize
+from sklearn.model_selection import train_test_split
 
 #Read external file from spam.csv
 test_data_rough=pd.read_csv("spam.csv", encoding='latin-1')
-test_data=test_data_rough[['v1','v2']]
-print(test_data)
+test_data_trn=test_data_rough[['v1','v2']]
+print(test_data_trn)
+
+test_data,test_data_tst=train_test_split(test_data_trn, test_size=0.1)
 
 #Load all 'spam' and 'ham' labelled texts to a list
 spam_text=test_data[test_data['v1']=='spam']
@@ -83,6 +86,7 @@ print(spamkey)
 
 spamkeydf=pd.DataFrame(spamkey)
 spamkeydf.to_csv("spamkey.csv")
+test_data_tst.to_csv("spamtest.csv")
 
 
 #Create counter and labeller for text with some number of spam
