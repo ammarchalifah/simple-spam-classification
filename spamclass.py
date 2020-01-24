@@ -3,13 +3,13 @@ import nltk
 from nltk.tokenize import word_tokenize
 
 spamkey=pd.read_csv("spamkey.csv", usecols=['0'])
-print(spamkey)
+#print(spamkey)
 
 spamlist=[]
 for i in spamkey['0']:
     spamlist.append(i)
 
-print(spamlist)
+#print(spamlist)
 
 #Number of tolerance
 numb=2
@@ -22,7 +22,7 @@ for x in test:
     for b in temp:
         textoken.append(b)
     
-print(textoken)
+#print(textoken)
 
 count=0
 for i in textoken:

@@ -1,0 +1,29 @@
+a {
+    color:purple;
+    text-decoration: underline, bold;
+    text-align: center;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+    font-family: "Arial";
+}
+
+p.description {
+    text-align:center;
+    color:#FFFFFF;
+    font-family: "Arial";
+}
+
+* {
+    text-align:center;
+}
+
+body {
+    background-color: black;
+}
+
+img.banner {
+    filter: grayscale(100%);
+}
